@@ -40,7 +40,7 @@ onValue(productsinDB, function(snapshot){
   if(snapshot.exists()){
      // Clear the container before appending the items
    clearproductContainer()
-   img.src="../asset/happy.svg"
+   img.src="./asset/happy.svg"
    let itemsArray = Object.entries(snapshot.val());
  
    for(let i = 0; i < itemsArray.length; i++){
@@ -49,7 +49,7 @@ onValue(productsinDB, function(snapshot){
      addProductTodataBase(currentItem)
    }
   }else{
-    img.src="../asset/sad.svg"
+    img.src="./asset/sad.svg"
     productContainer.innerHTML= "! Please Give me some food 😭"
   }
 })
